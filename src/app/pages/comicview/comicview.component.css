@@ -1,0 +1,59 @@
+
+
+.containerMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#containerCard {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.navbar-brand strong{
+  color: white;
+}
+
+
+.cardStyle{
+  color: black;
+  border-style: solid;
+  border-width: medium;
+  border-color: #daa520;
+  border-radius: 6px;
+}
+
+.containerModal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#carouselContainer{
+  max-height: 600px;
+}
+
+#centerSesion{
+  background-color: white;
+  border-style: solid;
+  border-width: medium;
+  border-color: #daa520;
+  border-radius: 6px;
+}
+
+.thumbComic{
+  align-items: flex-end;
+  display: flex;
+}
+
+.titleAndDescripiton{
+  margin-left: 100px;
+}
