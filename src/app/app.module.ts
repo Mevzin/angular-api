@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ComicviewComponent } from './pages/comicview/comicview.component';
 import { ComicComponent } from './pages/comic/comic.component';
 import {HttpClientModule} from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

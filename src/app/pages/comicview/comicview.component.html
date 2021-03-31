@@ -8,17 +8,18 @@
 </div>
 
 
-<div class="containerMain">
+<div class="containerMain" *ngFor="let comic of comicResult">
   <div id="centerSesion" class="container">
     <div class="row aling-itens-center">
       <div class="ttitleAndDescripiton col">
-        <h1 class="text-uppercase">Titulo comic</h1>
-        <p>Descrição de alguma coisa que eu não sei o que seria sendo algo pra ser!</p>
+        <h1 class="text-uppercase">{{comic.title}}</h1>
+        <p>{{comic.description}}</p>
       </div>
       <div class="col">
-        <img class="img-thumbnail thumbComic" src="./assets/images/teste.jpg">
+        <img class="img-thumbnail thumbComic" src={{comic.images[0].path}}.{{comic.images[0].extension}}>
       </div>
     </div>
+    <div id="map"></div>
     <div>
       <button type="button" class="btn btn-success ml-5 mb-5">Select Send</button>
     </div>

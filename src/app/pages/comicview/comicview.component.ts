@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { promise } from 'selenium-webdriver';
 import { ComicsApiService } from 'src/app/shared/comics-api.service';
 import { ComicviewApiService } from '../../shared/comicview-api.service';
+import { Loader } from "@googlemaps/js-api-loader"
 
 interface ResultsComic {
   id: number;
@@ -18,7 +19,24 @@ interface ResultsComic {
       extension: string;
     }
   ]
-  description: string
+  description: string,
+  pageCount: number,
+  format: string,
+  textObjects:[{
+    language:string;
+  }]
+  prices:[{
+    type:string;
+    price:number;
+  }]
+  creators:{
+    items:[
+      {
+        name:string;
+        role:string;
+    }
+  ]
+  }
 };
 
 @Component({
@@ -28,18 +46,35 @@ interface ResultsComic {
 })
 
     export class ComicviewComponent implements OnInit {
-    comicResult: ResultsComic;
+    comicResult: ResultsComic[];
     comicId: string;
+    loader = new Loader({
+      apiKey: "AIzaSyAn7DVQeyxMDd_w39uD-ydMM2pnk54D-Ys",
+      version: "weekly",
+    });
+    map: any;
 
       constructor(private activatedRoute: ActivatedRoute,private comicviewSvc: ComicviewApiService) {
-        this.comicResult = {} as ResultsComic;
+        this.comicResult = [];
         this.comicId= "";
       }
 
       ngOnInit(): void {
         this.searshComic();
-        console.log(this.comicResult);
+
+        this.loader.load().then(() => {
+          console.log("entrou");
+          this.map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+          });
+        }).catch(() =>{
+          console.log("erro mapa");
+        });
+
       }
+
+
 
       searshComic(){
         const idComicSelect = this.activatedRoute.snapshot.paramMap.get('idComicSelect');

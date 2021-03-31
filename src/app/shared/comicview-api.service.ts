@@ -14,7 +14,7 @@ export class ComicviewApiService {
   constructor(private http: HttpClient) { }
 
   getComic(id: string): Observable<any>{
-    console.log(this.URL_API + "&id=" + id);
+    console.log(id);
     return this.http.get<any>(this.URL_API + "&id=" + id);
 
   }
