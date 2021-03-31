@@ -8,37 +8,8 @@
   margin-top: 50px;
 }
 
-#containerCard {
-
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-}
-
 .navbar-brand strong{
   color: white;
-}
-
-
-.cardStyle{
-  color: black;
-  border-style: solid;
-  border-width: medium;
-  border-color: #daa520;
-  border-radius: 6px;
-}
-
-.containerModal{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#carouselContainer{
-  max-height: 600px;
 }
 
 #centerSesion{
@@ -56,4 +27,18 @@
 
 .titleAndDescripiton{
   margin-left: 100px;
+}
+
+.containerMap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+agm-map {
+  height: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 500px;
 }

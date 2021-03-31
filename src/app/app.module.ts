@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { ComicviewComponent } from './pages/comicview/comicview.component';
 import { ComicComponent } from './pages/comic/comic.component';
 import {HttpClientModule} from '@angular/common/http';
-import { GoogleMapsModule } from '@angular/google-maps';
+//import { GoogleMapsModule } from '@angular/google-maps';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,11 @@ import { GoogleMapsModule } from '@angular/google-maps';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleMapsModule,
+    //GoogleMapsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBjT_1JqB2Sc0eUBZX_tR5irQJYKL0fjD4',
+      libraries: ['places']
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

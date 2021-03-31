@@ -32,11 +32,24 @@
         <img class="img-thumbnail mt-3 thumbComic" src={{comic.images[0].path}}.{{comic.images[0].extension}}>
       </div>
     </div>
-    <div id="map"></div>
-    <div>
-      <button type="button" class="btn btn-success ml-5 mb-5">Select Send</button>
+
+    <div class="containerMap">
+      <div class="form-group">
+        <label>Enter address</label>
+        <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+      </div>
+
+      <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+          (dragEnd)="markerDragEnd($event)"></agm-marker>
+      </agm-map>
+
+      <h5>Address: {{address}}</h5>
+      <div>Latitude: {{latitude}}</div>
+      <div>Longitude: {{longitude}}</div>
+
+
     </div>
-    <google-map>  </google-map>
 
   </div>
 

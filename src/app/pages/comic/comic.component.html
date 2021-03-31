@@ -49,18 +49,17 @@
   </div>
 </div>
 
-<div  class="container m-2">
+<div  class="container m-4">
   <div id="containerCard" class="row">
-
-       <div class="card m-2 cardStyle" style="width: 18rem;" *ngFor="let comic of allComics; let i = index">
+       <div id="cardZoom" class="card m-3 cardStyle zoom" style="width: 18rem;" *ngFor="let comic of allComics; let i = index">
          <img src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}} height="500" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{comic.title}}</h5>
             <p class="card-text"></p>
-            <button id="btBuy"type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#moreInfo" (click)="openModal(i);">
+            </div>
+            <button id="btBuy"type="button" class="btn btn-outline-danger btn-sm mb-3" data-toggle="modal" data-target="#moreInfo" (click)="openModal(i);">
               More Details
             </button>
-          </div>
         </div>
 
   </div>
