@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { promise } from 'selenium-webdriver';
-import { ComicsApiService } from 'src/app/shared/comics-api.service';
+
 import { ComicviewApiService } from '../../shared/comicview-api.service';
 import { Loader } from "@googlemaps/js-api-loader"
+
 
 interface ResultsComic {
   id: number;
@@ -32,7 +31,7 @@ interface ResultsComic {
   creators:{
     items:[
       {
-        name:string;
+        name:string,
         role:string;
     }
   ]
@@ -46,6 +45,7 @@ interface ResultsComic {
 })
 
     export class ComicviewComponent implements OnInit {
+
     comicResult: ResultsComic[];
     comicId: string;
     loader = new Loader({
@@ -62,18 +62,9 @@ interface ResultsComic {
       ngOnInit(): void {
         this.searshComic();
 
-        this.loader.load().then(() => {
-          console.log("entrou");
-          this.map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8,
-          });
-        }).catch(() =>{
-          console.log("erro mapa");
-        });
+
 
       }
-
 
 
       searshComic(){

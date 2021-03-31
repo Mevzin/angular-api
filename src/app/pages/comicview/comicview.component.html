@@ -12,16 +12,32 @@
   <div id="centerSesion" class="container">
     <div class="row aling-itens-center">
       <div class="ttitleAndDescripiton col">
-        <h1 class="text-uppercase">{{comic.title}}</h1>
+        <h2 class="text-center text-uppercase">{{comic.title}}</h2>
+        <h5>Description</h5>
         <p>{{comic.description}}</p>
+        <h5>Format</h5>
+        <p>{{comic.format}}</p>
+        <h5>Number pages</h5>
+        <p>{{comic.pageCount}} pages</p>
+        <h5>Language</h5>
+        <p>{{comic.textObjects[0].language}}</p>
+        <h5>Price</h5>
+        <p>${{comic.prices[0].price}}</p>
+        <h5>Creators</h5>
+        <p>{{comic.creators.items[0].name}}: {{comic.creators.items[0].role}}</p>
+
+
       </div>
       <div class="col">
-        <img class="img-thumbnail thumbComic" src={{comic.images[0].path}}.{{comic.images[0].extension}}>
+        <img class="img-thumbnail mt-3 thumbComic" src={{comic.images[0].path}}.{{comic.images[0].extension}}>
       </div>
     </div>
     <div id="map"></div>
     <div>
       <button type="button" class="btn btn-success ml-5 mb-5">Select Send</button>
     </div>
+    <google-map>  </google-map>
+
   </div>
+
 </div>
