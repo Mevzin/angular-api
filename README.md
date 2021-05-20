@@ -1,27 +1,17 @@
 # AngularApiConsumer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+  Projeto referente ao desafio front_end brisanet.
+  Antes de rodar o projeto, de o comando "npm install" para baixar todas as dependencias.
+  Em seguida é so rodar com "ng serve".
+  O mesmo ira abrir no "localhost:4200".
 
-## Development server
+  Participei deste desafio front_end, pois comecei a estudar angular a pouco tempo, e queria fazer uma aplicação da mesma com os meus conhecimentos obtidos e o que ainda ia conhecer após produzi la. Peço perdão se estiver faltando algo,  pois tive pouco tempo para desenvolver, e ficaria muito grato se me derem a chance de ser contratado e evoluir junto a empresa. Obrigado pela oportunidade.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  hospedagem firebase:
+  https://angular-af51a.web.app/angular-api/
 
-## Code scaffolding
+  github:
+  https://github.com/Mevzin
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

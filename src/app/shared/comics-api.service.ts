@@ -17,8 +17,7 @@ export class ComicsApiService {
     return this.http.get<any>(this.URL_API);
   }
 
-  getComic(id: string): Observable<any>{
-    console.log("opa");
+  /*getComic(id: string): Observable<any>{
     return this.http.get<any>(this.URL_API + '&id=' + id);
-  }
+  }*/
 }
